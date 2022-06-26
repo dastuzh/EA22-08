@@ -1,0 +1,96 @@
+import os
+import gzip
+
+import numpy as np
+
+import Trie
+import LFTJ
+
+
+def readTable(path,db_type):
+    # path = r"../datasets/snap/ego-Facebook.tbl.gz"
+    if os.path.exists(path):
+        if db_type == "network":
+            with gzip.open(path,'rb') as f:
+                # load tbl as structure ndarray, set the column name(for sorting) and data type to be int16 (-32,768 to +32,767)
+                data= np.loadtxt(f,dtype = [("origNode",'<i2'),("desNode",'<i2')],delimiter="|")
+                data=np.sort(data,order=["origNode","desNode"])
+                return data
+    else:
+        print("the path is not found.")
+
+
+def task1():
+    fb = readTable(r"../datasets/snap/ego-Facebook.tbl.gz","network")
+    # tw = readTable(r"../datasets/snap/ego-Twitter.tbl.gz","network")
+    # eml = readTable(r"../datasets/snap/email-Enron.tbl.gz","network")
+    # wiki = readTable(r"../datasets/snap/wiki-Vote.tbl.gz","network")
+    print(fb)
+    print(len(fb))
+    # need to find the fb_mirror for undirected graph
+
+    print(type(fb))
+
+    fb.dtype.names = ['X1', 'X2']
+
+    R = Trie.Trie(fb)
+    R.get_column_names()
+
+    fb.dtype.names = ['X2', 'X3']
+    S = Trie.Trie(fb)
+    S.get_column_names()
+
+    fb.dtype.names = ['X1', 'X3']
+    T = Trie.Trie(fb)
+    T.get_column_names()
+
+def snap_task():
+    root = os.path.abspath(os.path.join(os.getcwd(), ".."))
+    output_folder = root +r"\answer\snap"
+    snap_dataset_path = root + r"\datasets\snap"
+    if not os.path.exists(output_folder):
+        os.makedirs(output_folder)
+    for file in os.listdir(snap_dataset_path):
+        if "Facebook" in file and "A" not in file and "B" not in file:
+            file_name="facebook-triangle-full.txt"
+            file_path = os.path.join(snap_dataset_path, file)
+            data = readTable(file_path, "network")
+            LFTJ.LFTJ_triangle_full(data, output_folder,file_name)
+        # if "Twitter" in file and "A" not in file and "B" not in file:
+        #     file_name="twitter-triangle-full.txt"
+        #     file_path = os.path.join(snap_dataset_path, file)
+        #     data = readTable(file_path, "network")
+        #     LFTJ.LFTJ_triangle_full(data, output_folder,file_name)
+        # if "Enron" in file and "A" not in file and "B" not in file:
+        #     file_name="enron-triangle-full.txt"
+        #     file_path = os.path.join(snap_dataset_path, file)
+        #     data = readTable(file_path, "network")
+        #     LFTJ.LFTJ_triangle_full(data, output_folder,file_name)
+        # if "wiki" in file and "A" not in file and "B" not in file:
+        #     file_name="wiki-triangle-full.txt"
+        #     file_path = os.path.join(snap_dataset_path, file)
+        #     data = readTable(file_path, "network")
+        #     LFTJ.LFTJ_triangle_full(data, output_folder,file_name)
+
+        # LFTJ.LFTJ_triangle_count(data, output_folder,file_name)
+        # LFTJ.path_1_count(data, output_path)
+        # LFTJ.path_1_full(data, output_path)
+        # LFTJ.path_2_count(data, output_path)
+        # LFTJ.path_2_full(data, output_path)
+
+
+
+
+
+
+
+
+
+if __name__ == '__main__':
+
+    snap_task()
+
+
+
+
+
