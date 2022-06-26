@@ -1,0 +1,69 @@
+Mon 27 Jun 00:05:13 CEST 2022
+------------------------------
+-- mini-private check       --
+------------------------------
+bash: run.sh: No such file or directory
+### Test Not Passed: facebook-1-path-count ###
+### Test Not Passed: facebook-1-path-full ###
+### Test Not Passed: facebook-2-path-count ###
+### Test Not Passed: facebook-2-path-full ###
+### Test Not Passed: facebook-triangle-count ###
+### Test Not Passed: facebook-triangle-full ###
+### Test Not Passed: twitter-1-path-count ###
+### Test Not Passed: twitter-1-path-full ###
+### Test Not Passed: twitter-2-path-count ###
+### Test Not Passed: twitter-2-path-full ###
+### Test Not Passed: twitter-triangle-count ###
+### Test Not Passed: twitter-triangle-full ###
+### Test Not Passed: wiki-1-path-count ###
+### Test Not Passed: wiki-1-path-full ###
+### Test Not Passed: wiki-2-path-count ###
+### Test Not Passed: wiki-2-path-full ###
+### Test Not Passed: wiki-triangle-count ###
+### Test Not Passed: wiki-triangle-full ###
+### Test Not Passed: enron-1-path-count ###
+### Test Not Passed: enron-1-path-full ###
+### Test Not Passed: enron-2-path-count ###
+### Test Not Passed: enron-2-path-full ###
+### Test Not Passed: enron-triangle-count ###
+### Test Not Passed: enron-triangle-full ###
+### Test Not Passed: IMDB query1 ###
+### Test Not Passed: IMDB query2 ###
+### Test Not Passed: IMDB query3 ###
+### Test Not Passed: IMDB query4 ###
+### Test Not Passed: IMDB query5 ###
+### Error found! ###
+------------------------------
+-- private check       --
+------------------------------
+bash: run.sh: No such file or directory
+### Test Not Passed: facebook-1-path-count ###
+### Test Not Passed: facebook-1-path-full ###
+### Test Not Passed: facebook-2-path-count ###
+### Test Not Passed: facebook-2-path-full ###
+### Test Not Passed: facebook-triangle-count ###
+### Test Not Passed: facebook-triangle-full ###
+### Test Not Passed: twitter-1-path-count ###
+### Test Not Passed: twitter-1-path-full ###
+### Test Not Passed: twitter-2-path-count ###
+### Test Not Passed: twitter-2-path-full ###
+### Test Not Passed: twitter-triangle-count ###
+### Test Not Passed: twitter-triangle-full ###
+### Test Not Passed: wiki-1-path-count ###
+### Test Not Passed: wiki-1-path-full ###
+### Test Not Passed: wiki-2-path-count ###
+### Test Not Passed: wiki-2-path-full ###
+### Test Not Passed: wiki-triangle-count ###
+### Test Not Passed: wiki-triangle-full ###
+### Test Not Passed: enron-1-path-count ###
+### Test Not Passed: enron-1-path-full ###
+### Test Not Passed: enron-2-path-count ###
+### Test Not Passed: enron-2-path-full ###
+### Test Not Passed: enron-triangle-count ###
+### Test Not Passed: enron-triangle-full ###
+### Test Not Passed: IMDB query1 ###
+### Test Not Passed: IMDB query2 ###
+### Test Not Passed: IMDB query3 ###
+### Test Not Passed: IMDB query4 ###
+### Test Not Passed: IMDB query5 ###
+### Error found! ###
